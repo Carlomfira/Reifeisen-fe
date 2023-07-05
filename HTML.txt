@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestiune Angajați</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="header">Gestiune Angajați</h1>
+
+  <div class="filters">
+    <label for="search-filter">Căutare:</label>
+    <input type="text" id="search-filter">
+
+    <label for="department-filter">Filtru departament:</label>
+    <select id="department-filter">
+      <option value="all">Toate</option>
+    </select>
+  </div>
+
+  <table id="employee-table">
+    <thead>
+      <tr>
+        <th>Nume</th>
+        <th>Departament</th>
+        <th>Poziție</th>
+        <th>Acțiuni</th>
+      </tr>
+    </thead>
+    <tbody id="employee-table-body"></tbody>
+  </table>
+
+  <div class="pagination">
+    <button onclick="previousPage()">Pagina anterioară</button>
+    <span id="current-page"></span>
+    <button onclick="nextPage()">Pagina următoare</button>
+  </div>
+
+  <button onclick="addEmployee()">Adaugă Angajat</button>
+  <button onclick="addDepartment()">Adaugă Departament</button>
+  <button onclick="saveChanges()">Salvează Modificările</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
